@@ -34,6 +34,8 @@ The project was developed in Databricks using sklearn, PyCaret, MLflow, SHAP, an
 # Project Structure
 
 ```text
+car-price-prediction/
+│
 ├── notebooks/
 │   ├── 01_Data_Gathering.ipynb
 │   ├── 02_Cleaning.ipynb
@@ -65,10 +67,11 @@ The project was developed in Databricks using sklearn, PyCaret, MLflow, SHAP, an
 ├── models/
 │   └── trained .pkl models
 │
-│
 ├── presentation/
 │   └── car-price-prediction-maria-petralia.pdf
 │
+├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
