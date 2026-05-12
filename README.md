@@ -35,28 +35,46 @@ The project was developed in Databricks using sklearn, PyCaret, MLflow, SHAP, an
 
 ```text
 ├── notebooks/
-│   ├── 01_load_cleaning.ipynb
-│   ├── 02_eda.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   ├── 04_preprocessing.ipynb
-│   ├── 05_linear_regression.ipynb
-│   ├── 06_tree_models.ipynb
-│   ├── 07_pycaret.ipynb
-│   ├── 08_final_comparison.ipynb
-│   └── 09_shap_lime.ipynb
+│   ├── 01_Data_Gathering.ipynb
+│   ├── 02_Cleaning.ipynb
+│   ├── 03_EDA.ipynb
+│   ├── 04_Feature_Engineering.ipynb
+│   ├── 05_1_Preprocessing_LinearRegression.ipynb
+│   ├── 05_2_Preprocessing_DecisionTree.ipynb
+│   ├── 06_1_Training_LinearRegression.ipynb
+│   ├── 06_2_Training_DecisionTree.ipynb
+│   ├── 07_PyCaret.ipynb
+│   └── 08_Evaluation.ipynb
 │
 ├── data/
 │   ├── raw/
-│   ├── cleaned/
-│   └── processed/
+│   │   └── original Kaggle dataset
+│   │
+│   ├── processed/
+│   │   └── cleaned & transformed datasets
+│   │
+│   ├── features/
+│   │   └── feature-engineered datasets
+│   │
+│   ├── metrics/
+│   │   └── exported model metrics & evaluation CSVs
+│   │
+│   └── train_test/
+│       └── saved train/test splits & serialized datasets
 │
 ├── models/
+│   └── trained .pkl models
+│
 │
 ├── presentation/
-│   └── car-price-prediction.pdf
+│   └── car-price-prediction-maria-petralia.pdf
 │
 └── README.md
 ```
+
+## 📌 Note
+
+Model artifacts and intermediate files were intentionally excluded from the repository to keep the project lightweight and focused on reproducible workflows and analysis.
 
 
 # Dataset
@@ -208,7 +226,7 @@ All experiments were logged under standardized preprocessing and evaluation cond
 
 ---
 
-# ⚠️ Project Limitations
+# Project Limitations
 
 The project intentionally highlights several structural limitations:
 
@@ -234,6 +252,28 @@ The project intentionally highlights several structural limitations:
 - MLflow
 - Databricks
 - Matplotlib
+
+---
+
+## Configuration
+
+The project uses a local configuration file for dataset, model, and artifact paths.
+
+Before running the notebooks, update the paths according to your local environment or Databricks workspace structure.
+
+---
+
+## Environment Notes
+
+Most notebooks were developed and executed in Databricks.
+
+PyCaret-related notebooks were executed locally in VS Code using:
+
+- Python 3.10
+- PyCaret
+- Compatible NumPy / Pandas versions
+
+This setup was required to ensure compatibility with the PyCaret ecosystem.
 
 ---
 
